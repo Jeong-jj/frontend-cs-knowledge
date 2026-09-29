@@ -135,9 +135,39 @@ scope   browser http network runtime security perf os interview meta
 
 - **`Co-Authored-By`, `Generated with` 같은 AI 표기를 커밋에도 PR 본문에도 넣지 않는다.**
 - `main` 에서 브랜치를 갈라 PR 로 머지한다. 스쿼시라 PR 제목이 `main` 의 커밋 제목이 된다.
+  이 보장은 GitHub 저장소 설정에 의존한다. 아래 절의 「머지 설정」 을 본다.
 - **PR 은 주제 단위다.** 주제 첫날 draft 로 열고 매일 커밋을 쌓아 push 한다.
   주제가 끝나면 본문을 채우고 ready 로 바꾼다. 당일 기록은 `sessions/` 가 맡는다.
 - 본문은 평서형과 명사형으로 쓴다. 구어체 존댓말을 쓰지 않는다.
 - **push, PR 열기, 저장소 설정 변경은 사용자에게 확인받고 한다.**
 
 절차는 `/commit` 과 `/pr` 스킬에 있다.
+
+### 커밋 단위
+
+**한 커밋이 덮는 파일이 많을수록 본문이 무엇도 설명하지 못한다.**
+판단 기준은 `git log -- <파일>` 이 그 파일의 이유를 내놓는가다.
+
+스물세 파일을 항목 네 개로 설명한 커밋은 어느 파일을 물어도 같은 네 줄을 낸다.
+파일마다 다른 근거를 가지면 커밋을 나눈다. 반대로 진행 과정이 없는데 억지로
+나누면 이력 위조다. **없는 과정을 만들지 않고, 있는 근거를 뭉치지 않는다.**
+
+### 머지 설정
+
+머지는 스쿼시다. GitHub 저장소 설정이 아래여야 이 절의 규칙이 성립한다.
+
+```text
+Allow squash merging → Default commit message
+  = Pull request title and commit details
+```
+
+제목은 PR 제목이 되고 본문은 브랜치 커밋 메시지가 이어 붙는다.
+`scripts/check-title.sh` 가 PR 제목을 검사하는 근거이고, 커밋 본문에 근거를
+쓰라는 규칙이 값을 하는 이유다.
+
+**기본값(`Default message`)은 커밋 하나짜리 PR 에서 그 커밋의 제목을 쓴다.**
+그러면 `PR 제목이 main 의 커밋 제목이 된다` 는 보장이 조용히 깨진다.
+`Pull request title` 은 본문을 버려 근거가 `main` 에 남지 않고,
+`Pull request title and description` 은 체크리스트까지 커밋 메시지에 넣는다.
+
+이 설정은 git 에 없고 저장소 설정 화면에만 있다. 바꾸면 위 규칙들이 함께 무너진다.

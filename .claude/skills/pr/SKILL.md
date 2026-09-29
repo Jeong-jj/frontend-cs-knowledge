@@ -83,16 +83,22 @@ git push -u origin <브랜치>
 gh pr create --draft --label "area:<scope>" --title "<제목>" --body-file <파일>
 ```
 
-라벨은 scope 와 같은 축이다. 처음 한 번은 만들어야 한다.
-
-```bash
-gh label create "area:browser" --color 0366d6
-```
+**축은 `area:` 하나다.** 아홉 개가 커밋 제목의 scope 와 일대일로 대응한다.
+저장소에 이미 만들어져 있다.
 
 ```text
 area:browser  area:http  area:network  area:runtime
 area:security  area:perf  area:os  area:interview  area:meta
 ```
+
+GitHub 기본 라벨(`bug` `documentation` `enhancement` `question` 등)은 지웠다.
+`documentation` 은 저장소 전체가 문서라 아무것도 구분하지 못하고, `bug` 와
+`enhancement` 는 제목의 `fix` 와 `note` 가 이미 하는 일이다. 두 곳에서 관리하면
+어긋난다.
+
+**축이 둘 이상이면 매번 조합을 고민하게 되고, 그 마찰로 라벨이 안 붙는다.**
+상태 축(`blocked`, `needs-decision` 등)이 필요해지면 그때 만든다.
+쓸 일이 생기기 전에 만든 라벨은 쓰이지 않는다.
 
 ---
 
