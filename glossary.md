@@ -29,6 +29,9 @@
 - **Cascade** (캐스케이드) — 한 속성에 여러 규칙이 걸릴 때 출처·명시도·등장 순서로 최종값을 고르는 CSS 의 절차다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
 - **FOUC** (Flash of Unstyled Content) — 스타일이 덜 적용된 화면이 잠깐 보였다가 바뀌는 현상이다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
 - **SPOF** (Single Point of Failure) — 그것 하나가 실패하면 전체가 멈추는 지점으로, 프론트엔드에서는 외부 도메인의 차단 리소스가 해당한다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **async** (`<script async>`) — 다운로드는 파싱과 병렬로 하고 도착하는 즉시 실행해 실행 순서를 보장하지 않는 스크립트 속성이다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **defer** (`<script defer>`) — 다운로드는 파싱과 병렬로 하고 HTML 파싱이 끝난 뒤 문서 순서대로 실행하는 스크립트 속성이다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **DOMContentLoaded** — HTML 파싱이 끝나 DOM 이 완성되고 defer 스크립트가 실행된 뒤 발생하는 이벤트다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
 
 ## HTTP
 
