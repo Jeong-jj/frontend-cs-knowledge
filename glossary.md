@@ -23,6 +23,12 @@
 - **Hit testing** (히트 테스팅) — 포인터 위치에 있는 상호작용 가능한 박스를 Layout 좌표로 찾는 과정이다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
 - **UA stylesheet** (User Agent stylesheet) — 브라우저가 기본으로 적용하는 스타일시트로, `<head>` 와 `[hidden]` 에 `display: none` 을 준다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
 - **익명 박스** (anonymous box) — DOM 요소 없이 레이아웃을 위해 브라우저가 만드는 이름 없는 박스다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **Parser-blocking script** (파서 차단 스크립트) — 다운로드와 실행이 끝날 때까지 HTML 파싱을 멈추게 하는 `async`·`defer`·`module` 없는 일반 `<script>` 다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **Script-blocking stylesheet** (스크립트 차단 스타일시트) — 뒤에 오는 스크립트의 실행을 다운로드가 끝날 때까지 미루게 하는 스타일시트다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **Render-blocking** (렌더 차단) — 준비될 때까지 브라우저가 화면을 그리지 않고 기다리게 하는 리소스의 성질로, `<head>` 의 스타일시트가 대표적이다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **Cascade** (캐스케이드) — 한 속성에 여러 규칙이 걸릴 때 출처·명시도·등장 순서로 최종값을 고르는 CSS 의 절차다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **FOUC** (Flash of Unstyled Content) — 스타일이 덜 적용된 화면이 잠깐 보였다가 바뀌는 현상이다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
+- **SPOF** (Single Point of Failure) — 그것 하나가 실패하면 전체가 멈추는 지점으로, 프론트엔드에서는 외부 도메인의 차단 리소스가 해당한다. → [렌더링 파이프라인](01-browser/rendering-pipeline.md)
 
 ## HTTP
 
