@@ -32,7 +32,7 @@ URL 해석 → DNS 조회 → IP 확인 → TCP 연결 → TLS 핸드셰이크
 
 | 주제 | 문서 | 상태 |
 |---|---|---|
-| 브라우저와 렌더링 파이프라인 | [`01-browser/rendering-pipeline.md`](01-browser/rendering-pipeline.md) | 작성 전 |
+| 브라우저와 렌더링 파이프라인 | [`01-browser/rendering-pipeline.md`](01-browser/rendering-pipeline.md) | 작성 중 |
 | HTTP 와 웹 통신 | [`02-http/http-fundamentals.md`](02-http/http-fundamentals.md) | 작성 전 |
 | DNS, TCP, TLS | [`03-network/dns-tcp-tls.md`](03-network/dns-tcp-tls.md) | 작성 전 |
 | JavaScript 런타임과 이벤트 루프 | [`04-javascript-runtime/event-loop.md`](04-javascript-runtime/event-loop.md) | 작성 전 |
